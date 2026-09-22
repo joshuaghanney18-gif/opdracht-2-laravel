@@ -10,8 +10,8 @@
     <h1>Lijst van Planeten</h1>
 
     <ul>
-        {{-- Dit is de Blade Directive die door je array heen loopt --}}
-        @foreach ($planets as $planet)
+        {{-- Veranderd van $planets naar $planeten zodat het matcht met web.php --}}
+        @foreach ($planeten as $planet)
             <li>
                 <strong>{{ $planet['name'] }}</strong>: 
                 {{ $planet['description'] }}
