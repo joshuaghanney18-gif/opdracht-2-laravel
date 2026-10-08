@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $planet['name'] }}</title>
+    <title>{{ $planeet['name'] }}</title>
 </head>
 <body>
 
-    <h1>{{ $planet['name'] }}</h1>
-    <p>{{ $planet['description'] }}</p>
+    <h1>{{ $planeet['name'] }}</h1>
+    <p>{{ $planeet['description'] }}</p>
 
-    <a href="/planets">Back to overview</a>
+    <br>
+    <p><a href="{{ route('home') }}">Terug naar de Homepagina</a></p>
+    <p><a href="{{ route('planets.index') }}">Terug naar alle planeten</a></p>
 
 </body>
-</html>
+</html> 

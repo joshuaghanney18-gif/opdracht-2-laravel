@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planeten Overzicht</title>
 </head>
 <body>
@@ -10,14 +9,16 @@
     <h1>Lijst van Planeten</h1>
 
     <ul>
-        {{-- Veranderd van $planets naar $planeten zodat het matcht met web.php --}}
         @foreach ($planeten as $planet)
             <li>
-                <strong>{{ $planet['name'] }}</strong>: 
-                {{ $planet['description'] }}
+                <a href="{{ route('planets.show', ['planet' => strtolower($planet['name'])]) }}">
+                    <strong>{{ $planet['name'] }}</strong>
+                </a>
             </li>
         @endforeach
     </ul>
 
+    <a href="{{ route('home') }}">Terug naar Home</a>
+
 </body>
-</html>
+</html> 
