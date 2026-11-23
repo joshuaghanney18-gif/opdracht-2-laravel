@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>{{ $planeet['name'] }}</title>
+    <title>{{ $planet->name }}</title>
 </head>
 <body>
-
-    <h1>{{ $planeet['name'] }}</h1>
-    <p>{{ $planeet['description'] }}</p>
-
-    <br>
-    <p><a href="{{ route('home') }}">Terug naar de Homepagina</a></p>
-    <p><a href="{{ route('planets.index') }}">Terug naar alle planeten</a></p>
-
+    <h1>{{ $planet->name }}</h1>
+    <p>{{ $planet->description }}</p>
+    <p>Size: {{ $planet->size_in_km }} km</p>
+    <a href="/planets">Terug naar overzicht</a>
 </body>
 </html> 

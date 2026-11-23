@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Planeten Overzicht</title>
+    <title>Planets</title>
 </head>
 <body>
-
-    <h1>Lijst van Planeten</h1>
-
+    <h1>Planets</h1>
     <ul>
-        @foreach ($planeten as $planet)
+        @foreach ($planets as $planet)
             <li>
-                <a href="{{ route('planets.show', ['planet' => strtolower($planet['name'])]) }}">
-                    <strong>{{ $planet['name'] }}</strong>
-                </a>
+                <a href="/planets/{{ $planet->name }}">{{ $planet->name }}</a>
+                - {{ $planet->description }} ({{ $planet->size_in_km }} km)
             </li>
         @endforeach
     </ul>
-
-    <a href="{{ route('home') }}">Terug naar Home</a>
-
 </body>
 </html> 
